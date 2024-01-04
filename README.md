@@ -33,7 +33,7 @@ No contexto deste desafio, abordamos a implementação e testes de tarefas deter
  - Criação da View para upload do arquivo com palestras
 </p>
 <p> 
-   <a href="https://github.com/AngeloSouza1/TT4/issues/">
+   <a href="https://github.com/AngeloSouza1/TT4/issues/3">
        <img src="https://img.shields.io/badge/Ver%20Solução-darkblue" alt="Ver Solução">
     </a>
 
