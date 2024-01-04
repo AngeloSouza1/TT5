@@ -4,7 +4,7 @@ class Api::ProposalsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:organize_conference]
 
   def organize_conference
-    file_path = Rails.root.join('public', 'proposals.txt')
+    file_path = Rails.root.join('tmp', 'uploads', 'proposals.txt')
     proposals = read_proposals_from_file(file_path)
     organized_schedule = organize_proposals(proposals)
     render json: organized_schedule
@@ -25,7 +25,6 @@ class Api::ProposalsController < ApplicationController
       end
     end
   end
-
 
 
 def organize_proposals(proposals)

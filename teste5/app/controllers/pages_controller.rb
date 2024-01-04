@@ -2,10 +2,6 @@ class PagesController < ApplicationController
   TEMP_UPLOAD_DIR = Rails.root.join('tmp', 'uploads')
   before_action :ensure_temp_upload_dir
   
-  
-  def home
-  end
-
   def upload_proposals
     uploaded_file = params[:proposals_file]
 
