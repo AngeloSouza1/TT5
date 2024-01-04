@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center" style="height: 100vh;">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+
+        <%= form_with(url: upload_proposals_path, method: :post, multipart: true, class: "mb-4") do |form| %>
+          <% if flash[:success] %>
+            <div class="alert alert-success" role="alert">
+              <%= flash[:success] %>
+            </div>
+          <% end %>
+
+          <% if flash[:error] %>
+            <div class="alert alert-danger" role="alert">
+              <%= flash[:error] %>
+            </div>
+          <% end %>
+
+          <div class="alert alert-info">
+            <p>Por favor, note que este formulário aceita apenas o arquivo "proposals.txt" para processamento.</p>
+          </div>
+
+          <div class="mb-3">
+            <%= form.label :proposals_file, "Escolha o arquivo 'proposals.txt'" %>
+            <%= form.file_field :proposals_file, class: "form-control", accept: ".txt" %>
+          </div>
+
+          <%= form.submit "Enviar Propostas", class: "btn btn-primary" %>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
