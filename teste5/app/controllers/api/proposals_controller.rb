@@ -26,7 +26,7 @@ class Api::ProposalsController < ApplicationController
     end
   end
 
-# ...
+
 
 def organize_proposals(proposals)
   lightning_proposals = proposals.select { |proposal| proposal[:duration] == 'lightning' }
@@ -41,9 +41,6 @@ def organize_proposals(proposals)
   }
 end
 
-# ...
-
- # ...
 
  def organize_track_schedule(proposals, track)
   morning_sessions = organize_sessions(proposals, 'morning', track)
@@ -56,7 +53,7 @@ end
       {
         title: lightning_proposal[:title],
         duration: 'lightning',
-        start_time: nil # No specific start time for lightning talks
+        start_time: nil 
       }
     end
 
@@ -71,7 +68,7 @@ end
   }
 end
 
-# ...
+
 
 
   def organize_sessions(proposals, period, track)
