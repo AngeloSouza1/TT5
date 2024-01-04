@@ -70,7 +70,6 @@ end
 
 
 
-
   def organize_sessions(proposals, period, track)
     sessions = []
     current_time = (period == 'morning' ? 9 : 13) * 60
